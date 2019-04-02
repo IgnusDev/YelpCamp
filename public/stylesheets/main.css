@@ -1,0 +1,39 @@
+.thumbnail img{
+    width: 100%;
+}
+.thumbnail{
+    padding:0;
+}
+.thumbnail .caption-full{
+    padding: 9px;
+}
+#delete-form{
+    display: inline;
+}
+#jumbotron{
+    background-image: url(https://images.unsplash.com/photo-1515228146022-7d8e52f8bba3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2053&q=80);
+    background-position: 50% 70%;
+    color:white;
+}
+.btn-primary{
+    background-color: #177E89;
+}
+.btn-primary:hover{
+    background-color: #9AD1D4;
+    border-color: #9AD1D4;
+    color: black;
+}
+.navbar{
+    background-color: #9AD1D4;
+    color: black;
+}
+.navbar a:hover{
+    color:white;
+}
+.navbar a{
+    color: black;
+    
+}
+.navbar-right li a:hover{
+    background-color: #9AD1D4;
+}
