@@ -3,6 +3,7 @@
 }
 .thumbnail{
     padding:0;
+    background-color: #EBFCFB;
 }
 .thumbnail .caption-full{
     padding: 9px;
@@ -36,4 +37,8 @@
 }
 .navbar-right li a:hover{
     background-color: #9AD1D4;
+}
+
+.well{
+    background-color: #EBFCFB;
 }
