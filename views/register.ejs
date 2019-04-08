@@ -1,11 +1,13 @@
 <% include ./partials/header %>
 
-<h1>Signup</h1>
+<div class="container" style="text-align:center">
+    <h1>Signup</h1>
+    <form action="/register" method="POST">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="password" placeholder="password">
+        <button>Signup</button>
+    </form>
+</div>
 
-<form action="/register" method="POST">
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="password" placeholder="password">
-    <button>Signup</button>
-</form>
 
 <% include ./partials/footer %>

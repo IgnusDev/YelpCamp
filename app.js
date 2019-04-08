@@ -15,9 +15,9 @@ const commentRoutes         = require("./routes/comments"),
         campgroundRoutes    = require("./routes/campgrounds"),
         indexRoutes          = require("./routes/index")
 
-//seedDB()  //seed the database
-mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true});
-//mongoose.connect("mongodb+srv://ignusdev:valhalla11@yelpcamp-cluster-xzuep.mongodb.net/test?retryWrites=true", {useNewUrlParser: true});
+
+var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp_v10";
+mongoose.connect(url, {useNewUrlParser: true});
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
@@ -53,21 +53,6 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments",commentRoutes);
 
 
-
-
-// Campground.create({
-//     name:"Granite Hill", 
-//     image:"https://farm3.staticflickr.com/2116/2164766085_0229ac3f08.jpg",
-//     description: "Fun happy place to camp!!!"
-    
-//     }, function(err, campground){
-//         if(err){
-//             console.log(err);
-//         }else{
-//             console.log("newly created campgorund");
-//             console.log(campground);
-//         }
-//     });
     
     app.listen(process.env.PORT, process.env.IP, function(){
     console.log("The YelpCamp Server Has Started");
