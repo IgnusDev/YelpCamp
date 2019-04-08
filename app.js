@@ -15,10 +15,9 @@ const commentRoutes         = require("./routes/comments"),
         campgroundRoutes    = require("./routes/campgrounds"),
         indexRoutes          = require("./routes/index")
 
-
 //seedDB()  //seed the database
-
-mongoose.connect("mongodb+srv://ignusdev:valhalla11@yelpcamp-cluster-xzuep.mongodb.net/test?retryWrites=true", {useNewUrlParser: true});
+mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true});
+//mongoose.connect("mongodb+srv://ignusdev:valhalla11@yelpcamp-cluster-xzuep.mongodb.net/test?retryWrites=true", {useNewUrlParser: true});
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
